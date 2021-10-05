@@ -25,8 +25,30 @@ class Movie {
 
 $pinocchio = new Movie("Pinocchio", "Matteo Garrone", 2019);
 $pinocchio->setLanguage("ita");
-var_dump($pinocchio);
 
 $titanic = new Movie("Titanic", "James Cameron", 1997);
 $titanic->setLanguage("eng");
-var_dump($titanic);
+
+// Stampo in html
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP OOP 1</title>
+</head>
+<body>
+    <div><strong>Titolo: </strong><?= $pinocchio->title ?></div>
+    <div><strong>Regista: </strong><?= $pinocchio->director ?></div>
+    <div><strong>Anno: </strong><?= $pinocchio->year ?></div>
+    <div><strong>Lingua: </strong><?= $pinocchio->language ?></div>
+    <hr>
+    <div><strong>Titolo: </strong><?= $titanic->title ?></div>
+    <div><strong>Regista: </strong><?= $titanic->director ?></div>
+    <div><strong>Anno: </strong><?= $titanic->year ?></div>
+    <div><strong>Lingua: </strong><?= $titanic->language ?></div>
+</body>
+</html>
